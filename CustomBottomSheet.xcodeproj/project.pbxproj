@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2F1BF7244E4A21009CB33B /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2F1BF6244E4A21009CB33B /* AnimalModel.swift */; };
 		FC9B4195244D1B8400DDBEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B4194244D1B8400DDBEE8 /* AppDelegate.swift */; };
 		FC9B4197244D1B8400DDBEE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B4196244D1B8400DDBEE8 /* SceneDelegate.swift */; };
 		FC9B4199244D1B8400DDBEE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B4198244D1B8400DDBEE8 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC2F1BF6244E4A21009CB33B /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		FC9B4191244D1B8400DDBEE8 /* CustomBottomSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomBottomSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9B4194244D1B8400DDBEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9B4196244D1B8400DDBEE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		FC9B41BC244E38C200DDBEE8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC2F1BF6244E4A21009CB33B /* AnimalModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC9B4199244D1B8400DDBEE8 /* ViewController.swift in Sources */,
+				FC2F1BF7244E4A21009CB33B /* AnimalModel.swift in Sources */,
 				FC9B4195244D1B8400DDBEE8 /* AppDelegate.swift in Sources */,
 				FC9B41C0244E3DA700DDBEE8 /* BottomSheetFilter.swift in Sources */,
 				FC9B4197244D1B8400DDBEE8 /* SceneDelegate.swift in Sources */,

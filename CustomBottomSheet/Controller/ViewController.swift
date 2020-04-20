@@ -12,13 +12,16 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var bottomSheetSort = BottomSheetSort()
-    var bottomSheetFilter = BottomSheetFilter()
+    fileprivate var data = [AnimalModel]()
+
+    fileprivate var bottomSheetSort = BottomSheetSort()
+    fileprivate var bottomSheetFilter = BottomSheetFilter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomSheetSort.view.frame = view.frame
         bottomSheetFilter.view.frame = view.frame
+        data = dummyData
     }
 
     @IBAction func btnSortTapped(_ sender: Any) {
@@ -33,12 +36,20 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Item \(indexPath.row)"
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let item = data[indexPath.row]
+
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = "Animal Type: \(item.type.rawValue)"
+
+        if item.isAvailable {
+            cell.accessoryType = .checkmark
+        }
+
         return cell
     }
 }
