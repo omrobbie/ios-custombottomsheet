@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var bottomSheetVC = BottomSheetViewController()
+    var bottomSheetVC = BottomSheetVC()
 
     override func viewDidLoad() {
         super.viewDidLoad()

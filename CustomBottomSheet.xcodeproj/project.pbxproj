@@ -14,7 +14,8 @@
 		FC9B419E244D1B8500DDBEE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC9B419D244D1B8500DDBEE8 /* Assets.xcassets */; };
 		FC9B41A1244D1B8500DDBEE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9B419F244D1B8500DDBEE8 /* LaunchScreen.storyboard */; };
 		FC9B41B6244DE39900DDBEE8 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B41B4244DE39900DDBEE8 /* BottomSheetViewController.swift */; };
-		FC9B41B7244DE39900DDBEE8 /* BottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9B41B5244DE39900DDBEE8 /* BottomSheetViewController.xib */; };
+		FC9B41B7244DE39900DDBEE8 /* BottomSheetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9B41B5244DE39900DDBEE8 /* BottomSheetVC.xib */; };
+		FC9B41B9244E387D00DDBEE8 /* BottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B41B8244E387D00DDBEE8 /* BottomSheetVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		FC9B41A0244D1B8500DDBEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC9B41A2244D1B8500DDBEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC9B41B4244DE39900DDBEE8 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
-		FC9B41B5244DE39900DDBEE8 /* BottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetViewController.xib; sourceTree = "<group>"; };
+		FC9B41B5244DE39900DDBEE8 /* BottomSheetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetVC.xib; sourceTree = "<group>"; };
+		FC9B41B8244E387D00DDBEE8 /* BottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,50 @@
 		FC9B4193244D1B8400DDBEE8 /* CustomBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				FC9B41BD244E38F500DDBEE8 /* CustomViews */,
+				FC9B41BC244E38C200DDBEE8 /* Model */,
+				FC9B41BB244E38BC00DDBEE8 /* View */,
+				FC9B41BA244E38B300DDBEE8 /* Controller */,
 				FC9B4194244D1B8400DDBEE8 /* AppDelegate.swift */,
 				FC9B4196244D1B8400DDBEE8 /* SceneDelegate.swift */,
-				FC9B4198244D1B8400DDBEE8 /* ViewController.swift */,
-				FC9B41B4244DE39900DDBEE8 /* BottomSheetViewController.swift */,
-				FC9B41B5244DE39900DDBEE8 /* BottomSheetViewController.xib */,
-				FC9B419A244D1B8400DDBEE8 /* Main.storyboard */,
 				FC9B419D244D1B8500DDBEE8 /* Assets.xcassets */,
 				FC9B419F244D1B8500DDBEE8 /* LaunchScreen.storyboard */,
 				FC9B41A2244D1B8500DDBEE8 /* Info.plist */,
 			);
 			path = CustomBottomSheet;
+			sourceTree = "<group>";
+		};
+		FC9B41BA244E38B300DDBEE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC9B4198244D1B8400DDBEE8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC9B41BB244E38BC00DDBEE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC9B419A244D1B8400DDBEE8 /* Main.storyboard */,
+				FC9B41B8244E387D00DDBEE8 /* BottomSheetVC.swift */,
+				FC9B41B5244DE39900DDBEE8 /* BottomSheetVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC9B41BC244E38C200DDBEE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC9B41BD244E38F500DDBEE8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FC9B41B4244DE39900DDBEE8 /* BottomSheetViewController.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +169,7 @@
 				FC9B41A1244D1B8500DDBEE8 /* LaunchScreen.storyboard in Resources */,
 				FC9B419E244D1B8500DDBEE8 /* Assets.xcassets in Resources */,
 				FC9B419C244D1B8400DDBEE8 /* Main.storyboard in Resources */,
-				FC9B41B7244DE39900DDBEE8 /* BottomSheetViewController.xib in Resources */,
+				FC9B41B7244DE39900DDBEE8 /* BottomSheetVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +184,7 @@
 				FC9B4195244D1B8400DDBEE8 /* AppDelegate.swift in Sources */,
 				FC9B4197244D1B8400DDBEE8 /* SceneDelegate.swift in Sources */,
 				FC9B41B6244DE39900DDBEE8 /* BottomSheetViewController.swift in Sources */,
+				FC9B41B9244E387D00DDBEE8 /* BottomSheetVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
