@@ -8,9 +8,22 @@
 
 import UIKit
 
+protocol BottomSheetSortDelegate {
+
+    func sortValueDidChanged(dataSort: [SortModel])
+}
+
 class BottomSheetSort: BottomSheetViewController {
 
     @IBOutlet weak var tableView: UITableView!
+
+    var delegate: BottomSheetSortDelegate?
+
+    fileprivate var dataSort: [SortModel] = [
+        SortModel(name: "Name", type: .name, status: false),
+        SortModel(name: "Type", type: .type, status: false),
+        SortModel(name: "Availability", type: .availability, status: false),
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +32,7 @@ class BottomSheetSort: BottomSheetViewController {
     }
 
     fileprivate func setupUI() {
-        viewHeight = 300
+        viewHeight = 250
     }
 
     fileprivate func setupSortList() {
@@ -32,17 +45,27 @@ class BottomSheetSort: BottomSheetViewController {
 extension BottomSheetSort: UITableViewDelegate , UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dataSort.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        let item = dataSort[indexPath.row]
+
         let switchView = UISwitch()
+        switchView.tag = item.type.rawValue
+        switchView.isOn = item.status
+        switchView.addTarget(self, action: #selector(sortChanged(_:)), for: .valueChanged)
 
         cell.backgroundColor = .clear
-        cell.textLabel?.text = "Item \(indexPath.row)"
+        cell.textLabel?.text = item.name
         cell.accessoryView = switchView
         
         return cell
+    }
+
+    @objc func sortChanged(_ sender: UISwitch) {
+        dataSort[sender.tag].status.toggle()
+        delegate?.sortValueDidChanged(dataSort: dataSort)
     }
 }

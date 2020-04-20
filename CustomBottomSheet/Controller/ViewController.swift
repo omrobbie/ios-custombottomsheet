@@ -19,9 +19,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bottomSheetSort.view.frame = view.frame
+        setupBottomSheetSort()
         bottomSheetFilter.view.frame = view.frame
         data = dummyData
+    }
+
+    fileprivate func setupBottomSheetSort() {
+        bottomSheetSort.view.frame = view.frame
+        bottomSheetSort.delegate = self
     }
 
     @IBAction func btnSortTapped(_ sender: Any) {
@@ -52,5 +57,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         return cell
+    }
+}
+
+extension ViewController: BottomSheetSortDelegate {
+
+    func sortValueDidChanged(dataSort: [SortModel]) {
+        data = dummyData
+
+        dataSort.forEach { (item) in
+            if item.status {
+                switch item.type {
+                case .name: data.sort(by: {$0.name < $1.name})
+                case .type: data.sort(by: {$0.type.rawValue < $1.type.rawValue})
+                case .availability: data.sort(by: {$0.isAvailable && !$1.isAvailable})
+                }
+            }
+        }
+
+        tableView.reloadData()
     }
 }

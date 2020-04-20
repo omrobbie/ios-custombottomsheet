@@ -44,10 +44,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6X7-65-29z">
-                                <rect key="frame" x="20" y="73" width="374" height="200"/>
+                                <rect key="frame" x="20" y="73" width="374" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="dCC-g7-4Km"/>
+                                    <constraint firstAttribute="height" constant="150" id="dCC-g7-4Km"/>
                                 </constraints>
                             </tableView>
                         </subviews>
