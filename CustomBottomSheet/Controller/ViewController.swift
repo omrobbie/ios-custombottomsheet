@@ -43,6 +43,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         let item = data[indexPath.row]
 
+        cell.imageView?.image = UIImage(named: item.imageName)
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "Animal Type: \(item.type.rawValue)"
 

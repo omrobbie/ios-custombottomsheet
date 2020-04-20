@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "siberian_husky.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

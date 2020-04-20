@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "clown_fish.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
