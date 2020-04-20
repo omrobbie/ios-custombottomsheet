@@ -10,7 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var bottomSheetVC = BottomSheetViewController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        bottomSheetVC.view.frame = view.frame
+    }
+
+    fileprivate func showBototmSheetView() {
+        view.addSubview(bottomSheetVC.view)
+    }
+
+    @IBAction func btnOpenTapped(_ sender: Any) {
+        showBototmSheetView()
     }
 }
