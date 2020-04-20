@@ -14,8 +14,10 @@
 		FC9B419E244D1B8500DDBEE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC9B419D244D1B8500DDBEE8 /* Assets.xcassets */; };
 		FC9B41A1244D1B8500DDBEE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9B419F244D1B8500DDBEE8 /* LaunchScreen.storyboard */; };
 		FC9B41B6244DE39900DDBEE8 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B41B4244DE39900DDBEE8 /* BottomSheetViewController.swift */; };
-		FC9B41B7244DE39900DDBEE8 /* BottomSheetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9B41B5244DE39900DDBEE8 /* BottomSheetVC.xib */; };
-		FC9B41B9244E387D00DDBEE8 /* BottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B41B8244E387D00DDBEE8 /* BottomSheetVC.swift */; };
+		FC9B41B7244DE39900DDBEE8 /* BottomSheetSort.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9B41B5244DE39900DDBEE8 /* BottomSheetSort.xib */; };
+		FC9B41B9244E387D00DDBEE8 /* BottomSheetSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B41B8244E387D00DDBEE8 /* BottomSheetSort.swift */; };
+		FC9B41C0244E3DA700DDBEE8 /* BottomSheetFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B41BE244E3DA700DDBEE8 /* BottomSheetFilter.swift */; };
+		FC9B41C1244E3DA700DDBEE8 /* BottomSheetFilter.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9B41BF244E3DA700DDBEE8 /* BottomSheetFilter.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +30,10 @@
 		FC9B41A0244D1B8500DDBEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC9B41A2244D1B8500DDBEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC9B41B4244DE39900DDBEE8 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
-		FC9B41B5244DE39900DDBEE8 /* BottomSheetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetVC.xib; sourceTree = "<group>"; };
-		FC9B41B8244E387D00DDBEE8 /* BottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetVC.swift; sourceTree = "<group>"; };
+		FC9B41B5244DE39900DDBEE8 /* BottomSheetSort.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetSort.xib; sourceTree = "<group>"; };
+		FC9B41B8244E387D00DDBEE8 /* BottomSheetSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetSort.swift; sourceTree = "<group>"; };
+		FC9B41BE244E3DA700DDBEE8 /* BottomSheetFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetFilter.swift; sourceTree = "<group>"; };
+		FC9B41BF244E3DA700DDBEE8 /* BottomSheetFilter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetFilter.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				FC9B419A244D1B8400DDBEE8 /* Main.storyboard */,
-				FC9B41B8244E387D00DDBEE8 /* BottomSheetVC.swift */,
-				FC9B41B5244DE39900DDBEE8 /* BottomSheetVC.xib */,
+				FC9B41B8244E387D00DDBEE8 /* BottomSheetSort.swift */,
+				FC9B41B5244DE39900DDBEE8 /* BottomSheetSort.xib */,
+				FC9B41BE244E3DA700DDBEE8 /* BottomSheetFilter.swift */,
+				FC9B41BF244E3DA700DDBEE8 /* BottomSheetFilter.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,7 +175,8 @@
 				FC9B41A1244D1B8500DDBEE8 /* LaunchScreen.storyboard in Resources */,
 				FC9B419E244D1B8500DDBEE8 /* Assets.xcassets in Resources */,
 				FC9B419C244D1B8400DDBEE8 /* Main.storyboard in Resources */,
-				FC9B41B7244DE39900DDBEE8 /* BottomSheetVC.xib in Resources */,
+				FC9B41C1244E3DA700DDBEE8 /* BottomSheetFilter.xib in Resources */,
+				FC9B41B7244DE39900DDBEE8 /* BottomSheetSort.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,9 +189,10 @@
 			files = (
 				FC9B4199244D1B8400DDBEE8 /* ViewController.swift in Sources */,
 				FC9B4195244D1B8400DDBEE8 /* AppDelegate.swift in Sources */,
+				FC9B41C0244E3DA700DDBEE8 /* BottomSheetFilter.swift in Sources */,
 				FC9B4197244D1B8400DDBEE8 /* SceneDelegate.swift in Sources */,
 				FC9B41B6244DE39900DDBEE8 /* BottomSheetViewController.swift in Sources */,
-				FC9B41B9244E387D00DDBEE8 /* BottomSheetVC.swift in Sources */,
+				FC9B41B9244E387D00DDBEE8 /* BottomSheetSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

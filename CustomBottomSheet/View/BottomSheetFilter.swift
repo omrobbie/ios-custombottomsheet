@@ -1,5 +1,5 @@
 //
-//  BottomSheetVC.swift
+//  BottomSheetFilter.swift
 //  CustomBottomSheet
 //
 //  Created by omrobbie on 21/04/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BottomSheetVC: BottomSheetViewController {
+class BottomSheetFilter: BottomSheetViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

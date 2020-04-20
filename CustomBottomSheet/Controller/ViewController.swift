@@ -10,18 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var bottomSheetVC = BottomSheetVC()
+    var bottomSheetSort = BottomSheetSort()
+    var bottomSheetFilter = BottomSheetFilter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bottomSheetVC.view.frame = view.frame
+        bottomSheetSort.view.frame = view.frame
+        bottomSheetFilter.view.frame = view.frame
     }
 
-    fileprivate func showBototmSheetView() {
-        view.addSubview(bottomSheetVC.view)
+    @IBAction func btnSortTapped(_ sender: Any) {
+        view.addSubview(bottomSheetSort.view)
     }
 
-    @IBAction func btnOpenTapped(_ sender: Any) {
-        showBototmSheetView()
+    @IBAction func btnFilterTapped(_ sender: Any) {
+        view.addSubview(bottomSheetFilter.view)
     }
 }

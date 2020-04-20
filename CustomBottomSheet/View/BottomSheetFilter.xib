@@ -7,28 +7,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetVC" customModule="CustomBottomSheet" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetFilter" customModule="CustomBottomSheet" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="XNM-Ao-edf" id="H8c-D7-Pbg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="XNM-Ao-edf">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ioo-QA-sAM">
+                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGj-GL-ff4">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eWV-q2-h47">
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6fP-Wy-QTH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICR-5e-kdC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIl-aN-Bsf">
                                 <rect key="frame" x="182" y="8" width="50" height="4"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="mWp-AU-ZfA"/>
-                                    <constraint firstAttribute="height" constant="4" id="szT-vX-nfZ"/>
+                                    <constraint firstAttribute="width" constant="50" id="5Nx-yv-lZK"/>
+                                    <constraint firstAttribute="height" constant="4" id="Zzj-nq-nc4"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -39,8 +39,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ICR-5e-kdC" firstAttribute="centerX" secondItem="eWV-q2-h47" secondAttribute="centerX" id="J36-2x-P4u"/>
-                            <constraint firstItem="ICR-5e-kdC" firstAttribute="top" secondItem="eWV-q2-h47" secondAttribute="top" constant="8" id="SR5-jc-nIH"/>
+                            <constraint firstItem="WIl-aN-Bsf" firstAttribute="top" secondItem="6fP-Wy-QTH" secondAttribute="top" constant="8" id="Q5I-mD-F6z"/>
+                            <constraint firstItem="WIl-aN-Bsf" firstAttribute="centerX" secondItem="6fP-Wy-QTH" secondAttribute="centerX" id="cfX-zS-YoU"/>
                         </constraints>
                     </view>
                     <blurEffect style="regular"/>
@@ -53,13 +53,13 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Ioo-QA-sAM" firstAttribute="leading" secondItem="cgD-ly-Itq" secondAttribute="leading" id="9Vd-7j-9pP"/>
-                <constraint firstItem="Ioo-QA-sAM" firstAttribute="top" secondItem="cgD-ly-Itq" secondAttribute="top" id="Gwo-VL-VQg"/>
-                <constraint firstItem="cgD-ly-Itq" firstAttribute="bottom" secondItem="Ioo-QA-sAM" secondAttribute="bottom" id="YzV-7l-NxN"/>
-                <constraint firstItem="cgD-ly-Itq" firstAttribute="trailing" secondItem="Ioo-QA-sAM" secondAttribute="trailing" id="eXf-Mu-bhb"/>
+                <constraint firstItem="IGj-GL-ff4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2gq-F0-0gm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IGj-GL-ff4" secondAttribute="bottom" id="448-fD-wC1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IGj-GL-ff4" secondAttribute="trailing" id="7X8-0T-9t3"/>
+                <constraint firstItem="IGj-GL-ff4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EcN-Jj-8jh"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="cgD-ly-Itq"/>
-            <point key="canvasLocation" x="48" y="-260"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="141" y="154"/>
         </view>
     </objects>
 </document>
