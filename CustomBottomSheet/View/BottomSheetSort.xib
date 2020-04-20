@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetSort" customModule="CustomBottomSheet" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="6X7-65-29z" id="na1-gC-Ph0"/>
                 <outlet property="view" destination="XNM-Ao-edf" id="H8c-D7-Pbg"/>
             </connections>
         </placeholder>
@@ -36,11 +37,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort animal by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="697-QF-jud">
+                                <rect key="frame" x="20" y="32" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6X7-65-29z">
+                                <rect key="frame" x="20" y="73" width="374" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="dCC-g7-4Km"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ICR-5e-kdC" firstAttribute="centerX" secondItem="eWV-q2-h47" secondAttribute="centerX" id="J36-2x-P4u"/>
+                            <constraint firstItem="697-QF-jud" firstAttribute="leading" secondItem="eWV-q2-h47" secondAttribute="leading" constant="20" id="S1f-iV-KZp"/>
                             <constraint firstItem="ICR-5e-kdC" firstAttribute="top" secondItem="eWV-q2-h47" secondAttribute="top" constant="8" id="SR5-jc-nIH"/>
+                            <constraint firstItem="6X7-65-29z" firstAttribute="leading" secondItem="eWV-q2-h47" secondAttribute="leading" constant="20" id="Uc6-wK-abi"/>
+                            <constraint firstItem="697-QF-jud" firstAttribute="top" secondItem="ICR-5e-kdC" secondAttribute="bottom" constant="20" id="f3I-9W-Kea"/>
+                            <constraint firstAttribute="trailing" secondItem="697-QF-jud" secondAttribute="trailing" constant="20" id="g5f-nt-m46"/>
+                            <constraint firstItem="6X7-65-29z" firstAttribute="top" secondItem="697-QF-jud" secondAttribute="bottom" constant="8" id="gCa-wi-iyH"/>
+                            <constraint firstAttribute="trailing" secondItem="6X7-65-29z" secondAttribute="trailing" constant="20" id="hKb-cA-Ecl"/>
                         </constraints>
                     </view>
                     <blurEffect style="regular"/>
@@ -59,7 +79,7 @@
                 <constraint firstItem="cgD-ly-Itq" firstAttribute="trailing" secondItem="Ioo-QA-sAM" secondAttribute="trailing" id="eXf-Mu-bhb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="cgD-ly-Itq"/>
-            <point key="canvasLocation" x="48" y="-260"/>
+            <point key="canvasLocation" x="47.826086956521742" y="-260.054347826087"/>
         </view>
     </objects>
 </document>
