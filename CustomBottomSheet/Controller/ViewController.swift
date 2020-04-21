@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 
     fileprivate func setupBottomSheetFilter() {
         bottomSheetFilter.view.frame = view.frame
+        bottomSheetFilter.delegate = self
     }
 
     fileprivate func loadData() {
@@ -68,7 +69,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ViewController: BottomSheetSortDelegate {
+extension ViewController: BottomSheetSortDelegate, BottomSheetFilterDelegate {
 
     func sortValueDidChanged(dataSort: [SortModel]) {
         data = dummyData
@@ -82,6 +83,22 @@ extension ViewController: BottomSheetSortDelegate {
                 }
             }
         }
+
+        tableView.reloadData()
+    }
+
+    func filterValueDidChanged(nameSearch: String, types: [String], isAvailable: Bool) {
+        data = dummyData
+
+        if !nameSearch.isEmpty {
+            data = data.filter({$0.name.lowercased().contains(nameSearch.lowercased())})
+        }
+
+        if types.count > 0 {
+            data = data.filter({types.contains($0.type.rawValue)})
+        }
+
+        data = data.filter({$0.isAvailable == isAvailable})
 
         tableView.reloadData()
     }

@@ -8,14 +8,24 @@
 
 import UIKit
 
+protocol BottomSheetFilterDelegate {
+
+    func filterValueDidChanged(nameSearch: String, types: [String], isAvailable: Bool)
+}
+
 class BottomSheetFilter: BottomSheetViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var switchView: UISwitch!
 
+    var delegate: BottomSheetFilterDelegate?
+
     fileprivate var type = [AnimalType]()
+
+    fileprivate var nameSearch = ""
     fileprivate var typeSelected = [String]()
+    fileprivate var isAvailable = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +53,13 @@ class BottomSheetFilter: BottomSheetViewController {
         type = AnimalType.allCases
     }
 
+    fileprivate func delegateCall() {
+        delegate?.filterValueDidChanged(nameSearch: nameSearch, types: typeSelected, isAvailable: isAvailable)
+    }
+
     @IBAction func switchViewTapped(_ sender: Any) {
-        print(switchView.isOn)
+        isAvailable = switchView.isOn
+        delegateCall()
     }
 }
 
@@ -54,7 +69,8 @@ extension BottomSheetFilter: UISearchBarDelegate {
         searchBar.resignFirstResponder()
 
         if let searchText = searchBar.text {
-            print(searchText)
+            nameSearch = searchText
+            delegateCall()
         }
     }
 }
@@ -89,7 +105,7 @@ extension BottomSheetFilter: UICollectionViewDelegate, UICollectionViewDelegateF
             cell.view.backgroundColor = .systemBlue
             typeSelected.append(item.rawValue)
         }
-        
-        print(typeSelected)
+
+        delegateCall()
     }
 }
