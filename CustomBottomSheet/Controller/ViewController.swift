@@ -72,8 +72,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: BottomSheetSortDelegate, BottomSheetFilterDelegate {
 
     func sortValueDidChanged(dataSort: [SortModel]) {
-        data = dummyData
-
         dataSort.forEach { (item) in
             if item.status {
                 switch item.type {
