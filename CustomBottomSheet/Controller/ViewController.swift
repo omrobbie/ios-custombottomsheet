@@ -20,13 +20,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBottomSheetSort()
-        bottomSheetFilter.view.frame = view.frame
-        data = dummyData
+        setupBottomSheetFilter()
+        loadData()
     }
 
     fileprivate func setupBottomSheetSort() {
         bottomSheetSort.view.frame = view.frame
         bottomSheetSort.delegate = self
+    }
+
+    fileprivate func setupBottomSheetFilter() {
+        bottomSheetFilter.view.frame = view.frame
+    }
+
+    fileprivate func loadData() {
+        data = dummyData
     }
 
     @IBAction func btnSortTapped(_ sender: Any) {

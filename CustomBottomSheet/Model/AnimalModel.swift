@@ -6,12 +6,15 @@
 //  Copyright © 2020 omrobbie. All rights reserved.
 //
 
-enum AnimalType: String {
+enum AnimalType: String, CaseIterable {
 
     case dog
     case cat
     case bird
     case fish
+    case horse
+    case snake
+    case bear
 }
 
 struct AnimalModel {
