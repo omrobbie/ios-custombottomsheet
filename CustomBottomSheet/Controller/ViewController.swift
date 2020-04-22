@@ -25,12 +25,10 @@ class ViewController: UIViewController {
     }
 
     fileprivate func setupBottomSheetSort() {
-        bottomSheetSort.view.frame = view.frame
         bottomSheetSort.delegate = self
     }
 
     fileprivate func setupBottomSheetFilter() {
-        bottomSheetFilter.view.frame = view.frame
         bottomSheetFilter.delegate = self
     }
 
@@ -39,11 +37,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnSortTapped(_ sender: Any) {
-        view.addSubview(bottomSheetSort.view)
+        bottomSheetSort.bringToFront(self)
     }
 
     @IBAction func btnFilterTapped(_ sender: Any) {
-        view.addSubview(bottomSheetFilter.view)
+        bottomSheetFilter.bringToFront(self)
     }
 }
 

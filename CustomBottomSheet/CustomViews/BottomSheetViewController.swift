@@ -18,6 +18,7 @@ class BottomSheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPanGestureRecognizer()
+        view.frame = UIScreen.main.bounds
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -32,7 +33,11 @@ class BottomSheetViewController: UIViewController {
         }
     }
 
-    func removeFromSuperview() {
+    func bringToFront(_ sender: UIViewController) {
+        sender.view.window!.addSubview(view)
+    }
+
+    fileprivate func removeFromSuperview() {
         UIView.animate(withDuration: 0.2, animations: {
             self.updateFrame(yPos: self.screenSize)
         }) { (_) in
