@@ -34,10 +34,14 @@ class BottomSheetViewController: UIViewController {
     }
 
     func bringToFront(_ sender: UIViewController) {
-        sender.view.window!.addSubview(view)
+        if view.isDescendant(of: sender.view.window!) {
+            removeFromSuperview()
+        } else {
+            sender.view.window!.addSubview(view)
+        }
     }
 
-    fileprivate func removeFromSuperview() {
+    func removeFromSuperview() {
         UIView.animate(withDuration: 0.2, animations: {
             self.updateFrame(yPos: self.screenSize)
         }) { (_) in

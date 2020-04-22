@@ -37,10 +37,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnSortTapped(_ sender: Any) {
+        bottomSheetFilter.removeFromSuperview()
         bottomSheetSort.bringToFront(self)
     }
 
     @IBAction func btnFilterTapped(_ sender: Any) {
+        bottomSheetSort.removeFromSuperview()
         bottomSheetFilter.bringToFront(self)
     }
 }
